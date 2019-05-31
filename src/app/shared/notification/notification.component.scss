@@ -1,0 +1,25 @@
+.notification {
+  position: fixed;
+  width: 100%;
+  top: -1000px;
+  transition: 1s;
+  z-index: 999;
+
+  &.display {
+    top: 20px;
+  }
+
+   & .inner {
+    background-color: #0091ea;
+    border-radius: 5px;
+    color: white;
+    padding-left: 40px;
+  }
+
+  & i.material-icons{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    cursor: pointer;
+  }
+}

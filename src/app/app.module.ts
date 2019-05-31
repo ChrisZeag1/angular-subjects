@@ -2,15 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+
+import { UserFormComponent } from './shared';
+import { DataViewerComponent } from './shared';
+import { NotificationComponent } from './shared';
+
+import { StarwarsService } from './shared';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserFormComponent,
+    DataViewerComponent,
+    NotificationComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CoreModule,
   ],
-  providers: [],
+  providers: [
+  StarwarsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

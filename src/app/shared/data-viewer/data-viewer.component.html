@@ -1,0 +1,8 @@
+<h5>Data Viewer: </h5>
+<pre *ngIf="data$ | async as data;else noData">
+  {{ (data | json) }}
+<pre>
+
+<ng-template #noData>
+  <h6>no Data</h6>
+</ng-template>

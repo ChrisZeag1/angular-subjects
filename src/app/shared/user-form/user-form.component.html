@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="input-field col s12">
+              <input id="name"  [(ngModel)]="data.name" type="text" name="name"/>
+                <label for="name" [ngClass]="{'active': data.name}">Name</label>
+          </div>
+          <div class="input-field col s12">
+              <input id="last"  [(ngModel)]="data.last" type="text" name="last"/>
+                <label for="last" [ngClass]="{'active': data.last}">Last</label>
+          </div>          
+          <button class=" col push-l5 waves-effect waves-light btn" type="submit" [disabled]="data.loading">
+          <span [hidden]="data.loading">Submit</span>
+          <span [hidden]="!data.loading">Loading ...</span>
+        </button>
+        </div>
+</form>
